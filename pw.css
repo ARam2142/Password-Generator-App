@@ -4,3 +4,12 @@
     padding: 0px;
 }
 
+html {
+    height: 100%;
+    width: 100%;
+}
+
+.container div {
+    background-color: aquamarine;
+    border-style: solid 2px;
+}
