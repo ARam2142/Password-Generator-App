@@ -19,21 +19,28 @@
 
 //Password Generator
 //event to trigger password
+
 function buttonClick() {
   //code to have password appear
 }
 var el = document.getElementById('generatePassword');
 el.addEventListener('click', buttonClick, false );
 
-function generatePassword() {
-  var numbers = [0,1,2,3,4,5,6,7,8,9];
-  var lowercase = "abcdefghijklmnopqrstuvwxyz";
-  var uppercase = lowercase.toUpperCase();
-  var specials = " /\!#$%&'()*+,-./:;<=>?@[]^_`{|}~ ";
+//create variables
+var lowercase, numbers, specials;
+numbers = 0,1,2,3,4,5,6,7,8,9;
+lowercase = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+symbols = " /\!#$%&'()*+,-./:;<=>?@[]^_`{|}~ ";
 
-  
+//generate the characters
+function generatePassword(characters) {
 
+  //generate random characters
+  var pw = '';
+  for (let i = 0; i < i.length; i++) {
+    pw += characters.charAt(Math.floor(Math.random()* characters.length));
+    console.log(pw);
+  }
   
-  
-
 }
+generatePassword();
