@@ -17,30 +17,27 @@
 
 //inlcude password length, lowercase uppercase letters, numbers, special characters
 
-//Password Generator
-//event to trigger password
+//handler event
+var textarea = document.getElementById('textarea');
+var generate = document.getElementById('generate');
 
-function buttonClick() {
-  //code to have password appear
-}
-var el = document.getElementById('generatePassword');
-el.addEventListener('click', buttonClick, false );
-
+//event listener
+generate.addEventListener('click', function(e){
+  //your code
+});
 //create variables
-var lowercase, numbers, specials;
-numbers = 0,1,2,3,4,5,6,7,8,9;
-lowercase = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-symbols = " /\!#$%&'()*+,-./:;<=>?@[]^_`{|}~ ";
+var numbers = '0123456789';
+var letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var symbols = " /\!#$%&'()*+,-./:;<=>?@[]^_`{|}~ ";
 
+console.log(generatePassword(12, letters));
 //generate the characters
-function generatePassword(characters) {
-
+function generatePassword(length, characters) {
   //generate random characters
   var pw = '';
   for (let i = 0; i < i.length; i++) {
-    pw += characters.charAt(Math.floor(Math.random()* characters.length));
+    pw += characters.charAt(Math.floor(Math.random() * characters.length));
     console.log(pw);
   }
-  
+  return pw;
 }
-generatePassword();
