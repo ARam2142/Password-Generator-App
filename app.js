@@ -22,7 +22,7 @@ const lowercase = 'abcdefghijklmnopqrstuvwxyz';
 const Special_Chars = charlowtohigh(33, 126);
 
 const submit = document.getElementById('submit')
-const textarea = document.getElementById('textarea')
+const textarea = document.getElementById('form')
 
 
 textarea.addEventListener('submit', function(e) {
