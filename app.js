@@ -22,11 +22,12 @@ const lowercase = 'abcdefghijklmnopqrstuvwxyz';
 const Special_Chars = charlowtohigh(33, 126);
 
 const submit = document.getElementById('submit')
-const textarea = document.getElementById('form')
+const textarea = document.getElementById('textarea')
 
 
 textarea.addEventListener('submit', function(e) {
-  //write code here
+  e.preventDefault()//write code here
+  const password = generatePassword()
 });
 
 function generatePassword() {
