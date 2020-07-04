@@ -15,29 +15,47 @@
   loop through length of pass to add a char to password
   finally displaying password*/
 
-//inlcude password length, lowercase uppercase letters, numbers, special characters
+//variables declared
+const numbers = '01234566789';
+const UPPERCASE = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+const lowercase = 'abcdefghijklmnopqrstuvwxyz';
+const Special_Chars = charlowtohigh(33, 126);
 
-//handler event
-var textarea = document.getElementById('textarea');
-var generate = document.getElementById('generate');
+const submit = document.getElementById('submit')
+const textarea = document.getElementById('textarea')
 
-//event listener
-generate.addEventListener('click', function(e){
-  //your code
-});
+/*
+textarea.addEventListener('submit', function(e) {
+  //write code here
+});*/
+
+function generatePassword() {
+  var string = fromCharCode(33);
+}
+
+function charlowtohigh(low, high) {
+  const arr = [];
+  for (let i = low; i <= high; i++) {
+    arr.push(i);
+  }
+  return arr;
+}
+
+
+
+
+
+
+
+
+
+/*
 //create variables
 var numbers = '0123456789';
-var letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 var symbols = " /\!#$%&'()*+,-./:;<=>?@[]^_`{|}~ ";
 
-console.log(generatePassword(12, letters));
-//generate the characters
-function generatePassword(length, characters) {
-  //generate random characters
-  var pw = '';
-  for (let i = 0; i < i.length; i++) {
-    pw += characters.charAt(Math.floor(Math.random() * characters.length));
-    console.log(pw);
-  }
-  return pw;
-}
+console.log(generatePassword(12, numbers));
+
+
+*/

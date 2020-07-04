@@ -32,3 +32,11 @@ body {
     margin-left: 20px;
     margin-right: 20px;
 }
+
+.btn-primary:hover{
+    color:red;
+}
+#generate:active {
+    border-color: green;
+    animation-duration: 4s;
+}
