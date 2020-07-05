@@ -15,33 +15,37 @@
   loop through length of pass to add a char to password
   finally displaying password*/
 
-//variables declare
-const numbers = '01234566789';
-const UPPERCASE = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-const lowercase = 'abcdefghijklmnopqrstuvwxyz';
-const Special_Chars = charlowtohigh(33, 126);
+function generatePassword(characters){
 
 const submit = document.getElementById('submit')
-const textarea = document.getElementById('textarea')
+const textarea = document.getElementById('textarea').length;
+
+//password characters
+let numbers = '01234566789';
+let UPPERCASE = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+let lowercase = 'abcdefghijklmnopqrstuvwxyz';
+let symbols = " /\!#$%&'()*+,-./:;<=>?@[]^_`{|}~ ";
+
+let pw = ""
+
+//create for loop for selecting password characters
+for (let i = 0; i <= characters.length; i++) {
+  pw += characters.charAt(Math.floor(Math.round() * characters.length));
+  console.log(characters.length)
+}
 
 
+}
+
+
+
+/*
 textarea.addEventListener('submit', function(e) {
   e.preventDefault()//write code here
   const password = generatePassword()
-});
+});*/
 
-function generatePassword() {
-  //var string = fromCharCode(33);
-  console.log(Special_Chars)
-}
 
-function charlowtohigh(low, high) {
-  const arr = [];
-  for (let i = low; i <= high; i++) {
-    arr.push(i);
-  }
-  return arr;
-}
 
 
 
