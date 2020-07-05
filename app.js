@@ -15,31 +15,36 @@
   loop through length of pass to add a char to password
   finally displaying password*/
 
-function generatePassword(){
+function generatePassword(length){
+  textarea = document.getElementById('textarea').innerHTML = makePassword(length);
 
-  const submit = document.getElementById('submit')
-  const textarea = document.getElementById('textarea').length;
+}
 
-  //password characters
+let createPassword = function(length) {
   const numbers = '01234566789';
   const UPPERCASE = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   const lowercase = 'abcdefghijklmnopqrstuvwxyz';
   const symbols = " /\!#$%&'()*+,-./:;<=>?@[]^_`{|}~ ";
 
-  //combinning strings
-  var value = numbers.concat(UPPERCASE, lowercase, symbols);
-  console.log(value);
+  let [lower, UPPER, num, sym] = [
+    Math.round(length/4),
+    Math.round(length/4),
+    Math.round(length/4),
+    length - 3 * Math.round(length/4),
+  ]
 
-  let pw = "";
+  let passwordCharacters = shuffle ([
+    ...getCharacters(lower, lowercase),
+    ...getCharacters(UPPER, UPPERCASE),
+    ...getCharacters(num, numbers),
+    ...getCharacters(sym, symbols)
+  ]);
 
-  //create for loop for selecting password characters
-  for (let i = 0; i <= value.length; i++) {
-    pw += value.charAt(Math.floor(Math.round() * Math.floor(value.length)));
-  }
-
-
+  let password = passwordCharacters.join("");
+  return password;
 }
 
+function getCharacters
 
 
 
