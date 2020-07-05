@@ -17,22 +17,25 @@
 
 function generatePassword(){
 
-const submit = document.getElementById('submit')
-const textarea = document.getElementById('textarea').length;
+  const submit = document.getElementById('submit')
+  const textarea = document.getElementById('textarea').length;
 
-//password characters
-let numbers = '01234566789';
-let UPPERCASE = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-let lowercase = 'abcdefghijklmnopqrstuvwxyz';
-let symbols = " /\!#$%&'()*+,-./:;<=>?@[]^_`{|}~ ";
+  //password characters
+  const numbers = '01234566789';
+  const UPPERCASE = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  const lowercase = 'abcdefghijklmnopqrstuvwxyz';
+  const symbols = " /\!#$%&'()*+,-./:;<=>?@[]^_`{|}~ ";
 
-let pw = ""
+  //combinning strings
+  var value = numbers.concat(UPPERCASE, lowercase, symbols);
+  console.log(value);
 
-//create for loop for selecting password characters
-for (let i = 0; i <= symbols.length; i++) {
-  pw += symbols.charAt(Math.floor(Math.round() * Math.floor(symbols.length)));
-  console.log(pw)
-}
+  let pw = "";
+
+  //create for loop for selecting password characters
+  for (let i = 0; i <= value.length; i++) {
+    pw += value.charAt(Math.floor(Math.round() * Math.floor(value.length)));
+  }
 
 
 }
