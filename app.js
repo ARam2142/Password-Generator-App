@@ -44,7 +44,18 @@ let createPassword = function(length) {
   return password;
 }
 
-function getCharacters
+function getCharacters(length, string) {
+  let characters = [];
+    for (let i = 0; i < length; i++) {
+      let random = Math.floor(Math.random() * string.length);
+      characters[i] = string.charAt(random);
+    }
+    return characters;
+}
+
+function shuffle(array){
+  return array.sort(() => Math.random() - 0.5);
+}
 
 
 
