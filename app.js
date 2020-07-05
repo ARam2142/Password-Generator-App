@@ -15,7 +15,7 @@
   loop through length of pass to add a char to password
   finally displaying password*/
 
-function generatePassword(characters){
+function generatePassword(){
 
 const submit = document.getElementById('submit')
 const textarea = document.getElementById('textarea').length;
@@ -29,22 +29,13 @@ let symbols = " /\!#$%&'()*+,-./:;<=>?@[]^_`{|}~ ";
 let pw = ""
 
 //create for loop for selecting password characters
-for (let i = 0; i <= characters.length; i++) {
-  pw += characters.charAt(Math.floor(Math.round() * characters.length));
-  console.log(characters.length)
+for (let i = 0; i <= symbols.length; i++) {
+  pw += symbols.charAt(Math.floor(Math.round() * Math.floor(symbols.length)));
+  console.log(pw)
 }
 
 
 }
-
-
-
-/*
-textarea.addEventListener('submit', function(e) {
-  e.preventDefault()//write code here
-  const password = generatePassword()
-});*/
-
 
 
 
