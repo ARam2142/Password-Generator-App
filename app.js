@@ -1,15 +1,12 @@
+
+
+
 function generatePassword(){
   //stored values
-  let uppercase= 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  let lowercase = 'abcdefghijklmnopqrstuvwxyz';
-  let numbers = '0123456789'
-  let specials = '!@#$%^&*()-={}~`<>?';
-
-  //values put into arrays
-  uppercaseSplit = uppercase.split('');
-  lowercaseSplit = lowercase.split('');
-  numbersSplit = numbers.split('');
-  specials = specials.split('');
+  let uppercase= 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+  let lowercase = 'abcdefghijklmnopqrstuvwxyz'.split('');
+  let numbers = '0123456789'.split('')
+  let specials = '!@#$%^&*()-={}~`<>?'.split('');
 
   //hold new variable
   array = [];
@@ -22,16 +19,16 @@ function generatePassword(){
 
     if(randomPass == 0) {
       randomPass2 = Math.floor(Math.random() * 12);
-      array.push(uppercaseSplit[randomPass2]);
+      array.push(uppercase[randomPass2]);
     } else if(randomPass == 1) {
       randomPass2 = Math.floor(Math.random() * 12);
-      array.push(lowercasecSplit[randomPass2]);
+      array.push(lowercase[randomPass2]);
     } else if(randomPass == 2) {
       randomPass2 = Math.floor(Math.random() * 12);
-      array.push(numbersSplit[randomPass2]);
-    } else (randomPass == 3)
+      array.push(numbers[randomPass2]);
+    } else if (randomPass == 3)
       randomPass2 = Math.floor(Math.random() * 12);
-      array.push(specialsSplit[randomPass2]);
+      array.push(specials[randomPass2]);
   }
 
 }
