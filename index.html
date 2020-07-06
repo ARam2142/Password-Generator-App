@@ -11,6 +11,7 @@
     </head>
     <body>
         <div class="container">
+            <form class="action">
             <div class="card text-center">
                 <div class="card-header">
                 <h1>Password Generator</h1>
@@ -21,17 +22,17 @@
                         <textarea
                         readonly
                         class="form-control" 
-                        id="textarea" 
+                        id="password" 
                         placeholder="Your Secure Password"
                         ></textarea>
                     </div>
                 </div>
-                <button type="button" 
-                class="btn btn-primary btn-lg" 
-                id="submit" 
-                onclick="submitPassword(12);"
+                <button
+                class="click" 
+                onclick="submit()"
                 >Generate</button>
             </div>
+            </form>
         </div>
         <script src="app.js"></script>
     </body>

@@ -28,15 +28,12 @@ body {
     border-width: 1px;
 }
 
-#makepassword {
+#password {
+    text-align: center;
     margin-left: 20px;
     margin-right: 20px;
 }
 
-.btn-primary:hover{
-    color:red;
-}
-#generate:active {
-    border-color: green;
-    animation-duration: 4s;
+button {
+    color: red;
 }
