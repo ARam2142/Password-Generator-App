@@ -1,9 +1,3 @@
-//select button from html
-const generateBtn = document.querySelector('#generate');
-
-//element to display password
-const displayPassword = document.querySelector('#password');
-
 function generatePassword(){
   //stored values
   let uppercase= 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -15,15 +9,29 @@ function generatePassword(){
   uppercaseSplit = uppercase.split('');
   lowercaseSplit = lowercase.split('');
   numbersSplit = numbers.split('');
-  specials = numbers.split('');
-  console.log(numbers.split(''))
+  specials = specials.split('');
+
+  //hold new variable
   array = [];
 
-
-  let password = ''
+  let randomPass;
+  let randomPass2;
 
   for (let i = 0; i < 12; i++) {
-    password += values.charAt(Math.floor(Math.random() * values.length))
+    randomPass += Math.floor(Math.random() * 4);
+
+    if(randomPass == 0) {
+      randomPass2 = Math.floor(Math.random() * 12);
+      array.push(uppercaseSplit[randomPass2]);
+    } else if(randomPass == 1) {
+      randomPass2 = Math.floor(Math.random() * 12);
+      array.push(lowercasecSplit[randomPass2]);
+    } else if(randomPass == 2) {
+      randomPass2 = Math.floor(Math.random() * 12);
+      array.push(numbersSplit[randomPass2]);
+    } else (randomPass == 3)
+      randomPass2 = Math.floor(Math.random() * 12);
+      array.push(specialsSplit[randomPass2]);
   }
 
 }
