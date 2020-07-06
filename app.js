@@ -1,34 +1,47 @@
+function generatePassword(){ 
+  //stored characters are turned into arrays
+  let uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split(''),
+  lowercase = 'abcdefghijklmnopqrstuvwxyz'.split(''),
+  numbers = '0123456789'.split(''),
+  specials = '!@#$%^&*()-={}~`<>?'.split('');
+  
+  //initialize password array
+  passwordArray = [];
 
+  //variable holds random generated number from 4 variables
+  let randomNum;
 
+  //variable holds random generated number from string
+  let randomNum2;
 
-function generatePassword(){
-  //stored values
-  let uppercase= 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
-  let lowercase = 'abcdefghijklmnopqrstuvwxyz'.split('');
-  let numbers = '0123456789'.split('')
-  let specials = '!@#$%^&*()-={}~`<>?'.split('');
+  //password will combine all arrays into one and be final result
+  let finalPassword;
 
-  //hold new variable
-  array = [];
-
-  let randomPass;
-  let randomPass2;
-
+  //loop through the array given
   for (let i = 0; i < 12; i++) {
-    randomPass += Math.floor(Math.random() * 4);
+    randomNum = Math.floor(Math.random() * 4);
 
-    if(randomPass == 0) {
-      randomPass2 = Math.floor(Math.random() * 12);
-      array.push(uppercase[randomPass2]);
-    } else if(randomPass == 1) {
-      randomPass2 = Math.floor(Math.random() * 12);
-      array.push(lowercase[randomPass2]);
-    } else if(randomPass == 2) {
-      randomPass2 = Math.floor(Math.random() * 12);
-      array.push(numbers[randomPass2]);
-    } else if (randomPass == 3)
-      randomPass2 = Math.floor(Math.random() * 12);
-      array.push(specials[randomPass2]);
+    //if else statement will determine which numbers are push through
+    if(randomNum == 0) {
+      randomNum2 = Math.floor(Math.random() * 12);
+      passwordArray.push(uppercase[randomNumber2]);
+
+    } else if (randomNum == 1) {
+      randomNum2 = Math.floor(Math.random() * 12);
+      passwordArray.push(lowercase[randomNumber2]);
+
+    } else if (randomNumber2 == 2) {
+      randomNumber2 = Math.floor(Math.random() * 12);
+      passwordArray.push(numbers[randomNum2]);
+      conso
+
+    } else if (randomNumber2 == 3) {
+      randomNumber2 = Math.floor(Math.random() * 12);
+      passwordArray.push(specials[randomNum2]);
+    }
+
   }
+  finalPassword = passwordArray.push(numbers, lowercase, uppercase, specials).join('');
+  console.log(finalPassword)
+};
 
-}
