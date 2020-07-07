@@ -16,7 +16,7 @@ function generatePassword(){
 
   //loop through the array given
   for (let i = 0; i < 12; i++) {
-    randomNum = Math.floor(Math.random() * 4);
+    randomNum = Math.floor(Math.random() * 4);//generate random character from 4 variables
 
     //switch statement will determine which numbers are push through
       switch(randomNum) {
@@ -41,11 +41,17 @@ function generatePassword(){
         default:
       }
     }
+
+    //Now we have a password Array, we need to make this into a stirng and get it in the DOM
+var button = document.querySelector('#password');
+
+    button.innerText = passwordArray.join('');
 }
 
-var button = document.querySelector('#password');
-    button.addEventListener('click', function(e){
-    e.target.style.background = 'green';
+var genButton = document.querySelector('.click');
+genButton.addEventListener('click', function(e){
+     e.preventDefault();
+     generatePassword();
 });
 
 //default
