@@ -19,24 +19,29 @@
                 <div class="card-body">
                 <h2 class="card-title">Generate Password</h2>
                     <div class="form-group">
+                        <!--password will display in textarea-->
                         <textarea
                         readonly
                         class="form-control" 
-                        id="password" 
+                        id="displayPassword" 
                         placeholder="Your Secure Password"
                         ></textarea>
                     </div>
                 </div>
-                <p>Password Length:
-                    <input id="plength" type="text" name="length" >
-                </p>
+                <!--choose your length of password-->
+                <label for="length" >Password Length:
+                    <input id="passwordlength" type="number" min="8" max="128" value="0" required>
+                </label>
+                <!--choice of character to use in password-->
                 <div>
-                <input id="uppercheck" type="checkbox" value="uppercase"/>Uppercase Letters
-                <input id="lowercheck"type="checkbox" value="lower" />Lowercase Letters
-                <input id="symcheck" type="checkbox" value="Symbols" />Special Characters
-                <input id="numcheck" type="checkbox" value="numbers" />Numbers
+                <input id="uppercheck" type="checkbox" value="uppercase" />Uppercase Letters
+                <input id="lowercheck"type="checkbox" value="lower"/>Lowercase Letters
+                <input id="symcheck" type="checkbox" value="Symbols"/>Special Characters
+                <input id="numcheck" type="checkbox" value="numbers"/>Numbers
                 </div>
+                <!--button to generate password-->
                 <button
+                type="submit"
                 class="click" 
                 >Generate</button>
             </div>
