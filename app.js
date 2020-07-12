@@ -1,18 +1,19 @@
+
 function generatePassword(){ 
+  //stored characters
+  let uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  let lowercase = 'abcdefghijklmnopqrstuvwxyz';
+  let numbers = '0123456789';
+  let specials = '!@#$%^&*()-={}~`<>?';
+
   //get elements by id
   const inputUpper = document.getElementById('uppercheck');
   const inputLower= document.getElementById('lowercheck');
   const inputSymbol = document.getElementById('symcheck');
   const inputNumber = document.getElementById('numcheck');
 
-  //stored characters
-  let uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  let lowercase = 'abcdefghijklmnopqrstuvwxyz';
-  let numbers = '0123456789';
-  let specials = '!@#$%^&*()-={}~`<>?';
-  
   //initialize password array
-  let passwordArray1 = [];
+  let passwordArray = [];
 
   //variable holds random generated element from array
   let randomNum;
@@ -21,37 +22,35 @@ function generatePassword(){
   let randomNum2;
 
   //loop through the array given
-  for (let i = 0; i < 15; i++) {
-    randomNum = Math.floor(Math.random() * 4);//generate random character from 4 variables
-    console.log()
+  for (let i = 0; i < 12; i++) {
+    randomNum = Math.floor(Math.random() * 4);//generate random character from 4 variabl
     //switch statement will determine which numbers are push through
-      switch(randomNum) {
-        case 1:
-        randomNum2 = Math.floor(Math.random() * 12);//random 12 characters are generated and held in randomNum2 variable
-        passwordArray1.push(uppercase[randomNum2]);
-        break;
-
-        case 2:
-        randomNum2 = Math.floor(Math.random() * 12);
-        passwordArray1.push(lowercase[randomNum2]);
-        break;
-
-        case 3: 
-        randomNum2 = Math.floor(Math.random() * 12);
-        passwordArray1.push(numbers[randomNum2]);
-        break;
-
-        default:
-        randomNum2 = Math.floor(Math.random() * 12);
-        passwordArray1.push(specials[randomNum2]);
-        break;
+      if(inputUpper == false && inputLower == false && inputSymbol == false && inputNumber == false) {
+        alert('please choose an option before hitting the button')
+        return false;
       }
-      
+      if(inputUpper.checked) {
+        randomNum2 = Math.floor(Math.random() * 5);//random 12 characters are generated and held in randomNum2 variable
+        passwordArray.push(uppercase[randomNum2]);
+      }
+      if(inputLower.checked) {
+        randomNum2 = Math.floor(Math.random() * 9);
+        passwordArray.push(lowercase[randomNum2]);
+      }
+
+      if(inputSymbol.checked) {
+        randomNum2 = Math.floor(Math.random() * 4);
+        passwordArray.push(specials[randomNum2]);
+      }
+      if(inputNumber.checked) {
+        randomNum2 = Math.floor(Math.random() * 10);
+        passwordArray.push(numbers[randomNum2]);
+      }
     }
-  
     //Now we have a password Array, we need to make this into a stirng and get it in the DOM
     const button = document.querySelector('#displayPassword');
-      button.innerText = passwordArray1.join('');
+    button.innerText = passwordArray.join('');
+
 }
 
 genButton = document.querySelector('.click');
