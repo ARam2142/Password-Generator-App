@@ -29,15 +29,22 @@
                     </div>
                 </div>
                 <!--choose your length of password-->
-                <label for="length" >Password Length:
-                    <input id="passwordlength" type="number" min="8" max="128" value="0" required>
+                <label for="passwordlength" >Password Length:
+                    <input id="passwordlength" type="number" name="passwordlength" min="8" max="128" value="1" required>
                 </label>
                 <!--choice of character to use in password-->
                 <div>
-                <input id="uppercheck" type="checkbox" value="uppercase" />Uppercase Letters
-                <input id="lowercheck"type="checkbox" value="lower"/>Lowercase Letters
-                <input id="symcheck" type="checkbox" value="Symbols"/>Special Characters
-                <input id="numcheck" type="checkbox" value="numbers"/>Numbers
+                <label for="uppercase">
+                    <input id="uppercheck" type="checkbox" value="uppercase" />Uppercase Letters
+                </label>
+                <label for="lower">
+                    <input id="lowercheck"type="checkbox" value="lower"/>Lowercase Letters
+                </label>
+                <label for="symbols">
+                    <input id="symcheck" type="checkbox" value="symbols"/>Special Characters
+                <label for= "numbers">
+                    <input id="numcheck" type="checkbox" value="numbers"/>Numbers
+                </label>
                 </div>
                 <!--button to generate password-->
                 <button
