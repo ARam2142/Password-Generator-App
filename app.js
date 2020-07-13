@@ -10,7 +10,7 @@ const inputUpper = document.getElementById('uppercheck');
 const inputLower = document.getElementById('lowercheck');
 const inputSymbol = document.getElementById('symcheck');
 const inputNumber = document.getElementById('numcheck');
-const inputLength = document.getElementById('passwordlength').value;
+const inputLength = document.getElementById('passwordlength');
   
 function generatePassword(){ 
   //stored characters
@@ -55,7 +55,7 @@ function generatePassword(){
       const button = document.querySelector('#displayPassword');
       button.innerText = passwordArray.join('');
 
-      /*This code does not work
+      /*This code does not
       if (document.getElementById('passwordlength').value.length < "8" || document.getElementById('passwordlength').value.length > "128") {
         alert('Please make sure your password is more than 8 characters and less than 128 characters');
         return false;
@@ -66,6 +66,12 @@ function generatePassword(){
         alert("Please introduce a valid length value! (6-50 characters)");
         return;
       }*/
+}
+
+function passwordLength() {
+  inputLength = document.getElementById('passwordlength').value;
+  document.querySelector('#displayPassword').innerHTML = "" + inputLength;
+  console.log(inputLength)
 }
 
 //event listener that will fire the click event on the generate button

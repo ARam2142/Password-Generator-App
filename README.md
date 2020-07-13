@@ -4,4 +4,3 @@ This application will allow you the(user)to generate a random password of your c
 Go to: https://aram2142.github.io/Password-Generator-App/
 
 
-* This application is still in development
