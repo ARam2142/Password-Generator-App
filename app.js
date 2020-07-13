@@ -67,12 +67,12 @@ function generatePassword(){
         return;
       }*/
 }
-
+/*
 function passwordLength() {
   inputLength = document.getElementById('passwordlength').value;
   document.querySelector('#displayPassword').innerHTML = "" + inputLength;
   console.log(inputLength)
-}
+}*/
 
 //event listener that will fire the click event on the generate button
 var genButton = document.querySelector('.click');
