@@ -55,6 +55,7 @@ function generatePassword(){
       const button = document.querySelector('#displayPassword');
       button.innerText = passwordArray.join('');
 
+      /*This code does not work
       if (document.getElementById('passwordlength').value.length < "8" || document.getElementById('passwordlength').value.length > "128") {
         alert('Please make sure your password is more than 8 characters and less than 128 characters');
         return false;
@@ -64,7 +65,7 @@ function generatePassword(){
       if (document.getElementById('passwordlength').value == "" || document.getElementById('passwordlength').value < "8" || document.getElementById('passwordlength').value > "128") {
         alert("Please introduce a valid length value! (6-50 characters)");
         return;
-      }
+      }*/
 }
 
 //event listener that will fire the click event on the generate button
