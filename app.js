@@ -28,7 +28,7 @@ function generatePassword(){
   //variable holds random generated number from string
   let randomNum2;
 
-  //loop through the values of the characters
+  //loop through the values and supposed to generate 10 characters
   for (let i = 0; i < 10; i++) {
     randomNum = Math.floor(Math.random() * 4);//generate random character from 4 variab
       
