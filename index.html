@@ -23,34 +23,31 @@
                         <textarea
                         readonly
                         class="form-control" 
-                        id="displayPassword" 
+                        id="displaypassword" 
                         placeholder="Your Secure Password"
                         ></textarea>
                     </div>
                 </div>
                 <!--choose your length of password-->
                 <label for="passwordlength" >Password Length:
-                    <input id="passwordlength" type="number" name="passwordlength" min="8" max="128" value="1" required>
+                    <input id="passwordlength" type="number" min="8" max="128" value="0" required>
                 </label>
-                <!--choice of character to use in password-->
-                <div>
-                <label for="uppercase">
-                    <input id="uppercheck" type="checkbox" value="uppercase" />Uppercase Letters
-                </label>
-                <label for="lower">
-                    <input id="lowercheck"type="checkbox" value="lower"/>Lowercase Letters
-                </label>
-                <label for="symbols">
-                    <input id="symcheck" type="checkbox" value="symbols"/>Special Characters
-                <label for= "numbers">
-                    <input id="numcheck" type="checkbox" value="numbers"/>Numbers
-                </label>
+                <!--choice of characters-->
+                <div class="checkboxvalidation">
+                    <label for="uppercase">
+                        <input id="uppercheck" type="checkbox" value="uppercase" />Uppercase Letters
+                    </label>
+                    <label for="lower">
+                        <input id="lowercheck"type="checkbox" value="lower"/>Lowercase Letters
+                    </label>
+                    <label for="specialchar">
+                        <input id="specialcharcheck" type="checkbox" value="symbols"/>Special Characters
+                    <label for= "numbers">
+                        <input id="numbercheck" type="checkbox" value="numbers"/>Numbers
+                    </label>
                 </div>
                 <!--button to generate password-->
-                <button
-                type="submit"
-                class="click" 
-                >Generate</button>
+                <button type="submit"class="click" >Generate</button>
             </div>
             </form>
         </div>
