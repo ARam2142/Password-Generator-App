@@ -11,7 +11,7 @@
     </head>
     <body>
         <div class="container">
-            <form action="" method="get" >
+            <form onsubmit="return false;">
             <div class="card text-center">
                 <div class="card-header">
                 <h1>Password Generator</h1>
@@ -23,8 +23,9 @@
                         <textarea
                         readonly
                         class="form-control" 
-                        id="displaypassword" 
+                        id="password" 
                         placeholder="Your Secure Password"
+                        aria-label="Generated Password"
                         ></textarea>
                     </div>
                 </div>
@@ -33,7 +34,7 @@
                     <input id="passwordlength" type="number" min="8" max="128" value="0" required>
                 </label>
                 <!--choice of characters-->
-                <div class="checkboxvalidation">
+                <div class="checkbox validation">
                     <label for="uppercase">
                         <input id="uppercheck" type="checkbox" value="uppercase" />Uppercase Letters
                     </label>
@@ -47,7 +48,7 @@
                     </label>
                 </div>
                 <!--button to generate password-->
-                <button type="submit"class="click" >Generate</button>
+                <button id="generate" class="btn">Generate</button>
             </div>
             </form>
         </div>

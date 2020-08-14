@@ -1,78 +1,77 @@
-const displayPassword = document.querySelector('#displaypassword');
-const passwordLengthInput = document.querySelector('#passwordlength');
 const upperCaseCheck = document.querySelector('#uppercheck');
 const lowerCaseCheck = document.querySelector('#lowercheck');
 const specialCharCheck = document.querySelector('#specialcharcheck');
 const numberCheck = document.querySelector('#numbercheck');
-const generateBtn = document.querySelector('.click');
+const generateBtn = document.querySelector('#generate');
 
 //password character choices
-const uppercase = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
-const lowercase = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
-const numbers = ['0','1','2','3','4','5','6','7','8','9'];
-const specials = ['!','@','#','$','%','^','&','*','(',')','-','=','{','}','~','`','<','>','?'];
+const uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+const lowercase = 'abcdefghijklmnopqrstuvwxyz'.split('');
+const numbers = '0123456789'.split('');
+const specials = '!@#$%^&*()-={}~`<>?'.split('');
 
 
-let passwordArray = [];
-
-function generatePassword() {
-  for (let i = 0; i < passwordArray; i++) {
-    
-  }
+// Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+  passwordText.value = password;
+  
 }
 
-//initialize passwordlength array
-let passwordLengh = [];
-
-function validatePasswordLength() {
-  //check validation of passwordlength
-  if (passwordLengthInput.value < 8) {
-    alert("password is too short");
-  } 
-  else if(passwordLengthInput.value > 128) {
-    alert("password is too long");
+//generate password
+function generatePassword () {
+  
+  //length of password from form
+  const passwordLength = document.querySelector('#passwordlength').value;
+  let passChar = passwordLength;
+  
+  //validate the length of password
+  if (passwordLength.value < 8 || passwordLength.value > 128) {
+    alert('your password is either too short or too long, do it again');
   }
-}
-
-//initializes variable if user checks a box
-let userChecksBox = [];
-
-//checks if checkboxes were checked
-function validateCheckBoxes() {
-  userChecksBox = [];
+  
+  //initialize final password array
+  let passwordArray = [];
+  
+  //initialize random password characters
+  let randomPassword = [];
 
   if (upperCaseCheck.checked) {
-    userChecksBox.concat(uppercase);
-    console.log(userChecksBox.concat(uppercase));
+    randomPassword = randomPassword.concat(uppercase);
   }
   
   if(lowerCaseCheck.checked) {
-    userChecksBox.concat(lowercase)
-    console.log(userChecksBox.concat(lowercase));
+    randomPassword = randomPassword.concat(lowercase);
   }
   
   if (specialCharCheck.checked) {
-    userChecksBox.concat(specials)
-    console.log(userChecksBox.concat(specials));
+    randomPassword = randomPassword.concat(specials);
   }
   
   if (numberCheck.checked) {
-    userChecksBox.concat(numbers)
-    console.log(userChecksBox.concat(numbers));
+    randomPassword = randomPassword.concat(numbers);
   }
-  
-  else if (!upperCaseCheck.checked && !lowerCaseCheck.checked && !specialCharCheck.checked && !numberCheck.checked) {
-    alert('you have to check a box first moron')
+
+  //loop through each variable of characters
+  //work cited: https://stackoverflow.com/questions/1349404/generate-random-string-characters-in-javascript?page=1&tab=active#tab-top
+  for (let i = 0; i < passChar; i++) {
+    //generate random set of characters
+    passwordArray.push(randomPassword[Math.floor(Math.random() * randomPassword.length)]);
+    var createPassword = passwordArray.join('');
+    
   }
+  return createPassword;
+
 }
+
+//add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
+
+
+
+
+
   
-  
-  
-generateBtn.addEventListener('click', function(e){
-  e.preventDefault();
-  validatePasswordLength();
-  validateCheckBoxes();
-  generatePassword();
-});
-  
+
   
