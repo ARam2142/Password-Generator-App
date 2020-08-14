@@ -53,10 +53,9 @@ function generatePassword () {
     randomPassword = randomPassword.concat(numbers);
   }
 
-  //loop through each variable of characters
+  //loop through each variable of characters and generate characters
   //work cited: https://stackoverflow.com/questions/1349404/generate-random-string-characters-in-javascript?page=1&tab=active#tab-top
   for (let i = 0; i < passChar; i++) {
-    //generate random set of characters
     passwordArray.push(randomPassword[Math.floor(Math.random() * randomPassword.length)]);
     var createPassword = passwordArray.join('');
     
