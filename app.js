@@ -10,13 +10,11 @@ const lowercase = 'abcdefghijklmnopqrstuvwxyz'.split('');
 const numbers = '0123456789'.split('');
 const specials = '!@#$%^&*()-={}~`<>?'.split('');
 
-
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  var passwordText = document.querySelector("#displaypassword");
   passwordText.value = password;
-  
 }
 
 //generate password
@@ -27,14 +25,14 @@ function generatePassword () {
   let passChar = passwordLength;
   
   //validate the length of password
-  if (passwordLength.value < 8 || passwordLength.value > 128) {
-    alert('your password is either too short or too long, do it again');
+  if (passChar.value < 8 || passChar.value > 128) {
+    alert('eres un idiota, por favor intentalo de nuevo!');
   }
   
   //initialize final password array
   let passwordArray = [];
   
-  //initialize random password characters
+  //initialize random password array
   let randomPassword = [];
 
   if (upperCaseCheck.checked) {
@@ -61,7 +59,6 @@ function generatePassword () {
     
   }
   return createPassword;
-
 }
 
 //add event listener to generate button

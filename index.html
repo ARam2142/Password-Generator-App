@@ -23,7 +23,7 @@
                         <textarea
                         readonly
                         class="form-control" 
-                        id="password" 
+                        id="displaypassword" 
                         placeholder="Your Secure Password"
                         aria-label="Generated Password"
                         ></textarea>
@@ -34,7 +34,23 @@
                     <input id="passwordlength" type="number" min="8" max="128" value="0" required>
                 </label>
                 <!--choice of characters-->
-                <div class="checkbox validation">
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="uppercheck">
+                    <label class="form-check-label">Uppercase Letters</label>
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="lowercheck">
+                    <label class="form-check-label">Lowercase Letters</label>
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="specialcharcheck">
+                    <label class="form-check-label">Special Characters</label>
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="numbercheck">
+                    <label class="form-check-label">Numbers</label>
+                  </div>
+                <!--<div class="checkbox validation">
                     <label for="uppercase">
                         <input id="uppercheck" type="checkbox" value="uppercase" />Uppercase Letters
                     </label>
@@ -46,9 +62,9 @@
                     <label for= "numbers">
                         <input id="numbercheck" type="checkbox" value="numbers"/>Numbers
                     </label>
-                </div>
+                </div>-->
                 <!--button to generate password-->
-                <button id="generate" class="btn">Generate</button>
+                <button id="generate" type="button" class="btn btn-primary btn-lg btn-block">Generate</button>
             </div>
             </form>
         </div>

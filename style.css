@@ -15,10 +15,9 @@ body {
 }
 
 .container div {
-    background-color: aquamarine;
+    background-color: rgba(103, 216, 236, 0.253);
     border-style: solid 2px;
     border-color: black;
-    margin: 30px 20px 30px 20px;
     padding: 2px 5px 2px 5px;
 }
 
@@ -28,7 +27,7 @@ body {
     border-width: 1px;
 }
 
-#displayPassword {
+#displaypassword {
     text-align: center;
     margin-left: 20px;
     margin-right: 20px;
@@ -36,7 +35,7 @@ body {
     font-weight: bold;
 }
 
-button {
-    color: red;
+button#generate.btn {
+    background-color: blue;
 }
 
