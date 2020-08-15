@@ -8,7 +8,7 @@ const generateBtn = document.querySelector('#generate');
 const uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 const lowercase = 'abcdefghijklmnopqrstuvwxyz'.split('');
 const numbers = '0123456789'.split('');
-const specials = '!@#$%^&*()-={}~`<>?'.split('');
+const specials = '!@#$%^&*()-={}~`<>?+[]:;'.split('');
 
 // Write password to the #password input
 function writePassword() {
@@ -19,14 +19,15 @@ function writePassword() {
 
 //generate password
 function generatePassword () {
-  
+
   //length of password from form
   const passwordLength = document.querySelector('#passwordlength').value;
   let passChar = passwordLength;
   
   //validate the length of password
-  if (passChar.value < 8 || passChar.value > 128) {
-    alert('eres un idiota, por favor intentalo de nuevo!');
+  if (passChar < 8 || passChar > 128) {
+    alert('your password is either too long or too short, try again');
+    return "";
   }
   
   //initialize final password array
