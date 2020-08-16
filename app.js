@@ -26,7 +26,7 @@ function generatePassword () {
   
   //validate the length of password
   if (passChar < 8 || passChar > 128) {
-    alert('your password is either too long or too short, try again');
+    alert('try again');
     return "";
   }
   
