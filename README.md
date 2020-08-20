@@ -1,19 +1,22 @@
 # Password-Generator-App
 
-#Background:
+# Background:
 
-This application will allow you the(user)to generate a random password of your choice. You will be given the option to create a password with the options of length and characters. You can include uppercase, lowercase, symbols or numbers in the password. You can select the length but it must must be between 8 and 128 characters long otherwise you cant create new password.
+This application will allow you the(user)to generate a random password of your choice. You will be given the option to create a password with the options of length and characters. You can include uppercase, lowercase, special characters or numbers in the password. You can select the length but it must must be between 8 and 128 characters long otherwise you can't create a new password.
 __________________________________________
 # Technologies Used:
 
 Bootstrap
+
 Javascript
+
 HTML
+
 CSS
 ______________________________________
 # Outcome:
 
-This app wasnt exactly hard. As a matter of fact I did enjoy creating it. The only roadblock i hit was when i tried figuring out how to generate and mix characters for the password.
+This app wasnt exactly hard. As a matter of fact I did enjoy creating it. The only roadblock I hit was when i tried figuring out how to generate and mix characters for the password. This is my first javascript project so it was new to me. There was alot of planning involved before I started coding.
 
 # Screenshots:
 
@@ -25,4 +28,3 @@ Go to: https://aram2142.github.io/Password-Generator-App/
 # License
 
 [![license information](https://img.shields.io/badge/license-MIT-blue)](https://aram2142.github.io/Password-Generator-App/blob/master/LICENSE)
-
